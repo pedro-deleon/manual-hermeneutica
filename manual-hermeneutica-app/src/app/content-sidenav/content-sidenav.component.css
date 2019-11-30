@@ -1,10 +1,29 @@
-.example-tree-invisible {
-  display: none;
+.mat-tree-node {
+  padding: 0px !important;
+  margin: -6px;
+  font-size: 15px;
+  min-height: 0px;
 }
 
-.example-tree ul,
-.example-tree li {
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style-type: none;
+.mat-tree-node:hover {
+  background-color: gainsboro;
+}
+
+.mat-tree {
+  min-width: 300px;
+}
+
+
+.tree-parent {
+  color: rgb(8, 8, 100);
+}
+
+.tree-child {
+  color: rgb(78, 78, 78);
+}
+
+.tree-parent:hover,
+.tree-child:hover {
+  cursor: pointer;
+
 }

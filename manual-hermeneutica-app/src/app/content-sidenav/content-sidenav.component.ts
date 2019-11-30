@@ -5,55 +5,83 @@ import {
   MatTreeFlatDataSource
 } from "@angular/material/tree";
 
-// interface AreaNode {
-//   name: string;
-//   children?: AreaNode[];
-// }
-
-// const TREE_DATA: AreaNode[] = [
-//   {
-//     name: 'CONTEXTO INTERNO',
-//     children: [
-//       { name: 'Desde el Libro Mismo' },
-//       { name: 'Divisiones de los Párrafos' },
-//       { name: 'Agrupación de los Párrafos' },
-//       { name: 'Elemento Existencial Humano' },
-//       { name: 'Identificación de la Cultura' },
-//       { name: 'Evaluación de la Cultura' },
-//       { name: 'Técnica de Análisis de los Problemas' }
-//     ]
-//   }
-
-// ]
-
-/**
- * Food data with nested structure.
- * Each node has a name and an optiona list of children.
- */
-interface FoodNode {
+interface AreaNode {
   name: string;
-  children?: FoodNode[];
+  route?: string;
+  children?: AreaNode[];
 }
 
-const TREE_DATA: FoodNode[] = [
+const TREE_DATA: AreaNode[] = [
   {
-    name: "Fruit",
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    name: 'CONTEXTO INTERNO',
+    children: [
+      { name: 'Desde el Libro Mismo', route: '/core/libro-mismo' },
+      { name: 'Divisiones de los Párrafos', route: '/core/division-parrafos' },
+      { name: 'Agrupación de los Párrafos', route: '/core/agrupacion-parrafos' },
+      { name: 'Elemento Existencial Humano', route: '/core/elemento-existencial-humano' },
+      { name: 'Identificación de la Cultura', route: '/core/identificacion-cultura' },
+      { name: 'Evaluación de la Cultura', route: '/core/evaluacion-cultura' },
+      { name: 'Técnica de Análisis de los Problemas', route: '/core/analisis-problemas' }
+    ],
+    route: '/areas/contexto-interno'
   },
   {
-    name: "Vegetables",
+    name: 'SEMÁNTICA',
     children: [
-      {
-        name: "Green",
-        children: [{ name: "Broccoli" }, { name: "Brussel sprouts" }]
-      },
-      {
-        name: "Orange",
-        children: [{ name: "Pumpkins" }, { name: "Carrots" }]
-      }
-    ]
-  }
-];
+      { name: 'Definición de palabras y expresiones', route: '/core/definicion-palabras' },
+      { name: 'Léxico del idioma original', route: '/core/lexico' },
+      { name: 'Etimología', route: '/core/etimologia' },
+      { name: 'Uso de una palabra', route: '/core/uso-palabra' },
+      { name: 'Categorías de patrones semánticos', route: '/core/patrones-semanticos' },
+      { name: 'Campos semánticos', route: '/core/campos-semanticos' },
+      { name: 'Frecuencia del uso', route: '/core/frecuencia-uso' },
+      { name: 'Connotación y denotación', route: '/core/connotacion-denotacion' },
+      { name: 'Clasificación semántica oraciones', route: '/core/semantica-oraciones' },
+      { name: 'Usus Loquendi', route: '/core/usus-loquendi' },
+      { name: 'Observaciones Finales', route: '/core/semantica-of' },
+    ],
+    route: '/areas/semantica'
+  },
+  {
+    name: 'GRAMATICA',
+    children: [
+      { name: 'Sustantivos', route: '/core/sustantivos' },
+      { name: 'Verbos', route: '/core/verbos' },
+      { name: 'Preposiciones', route: '/core/preposiciones' },
+      { name: 'Adjetivos y adverbios', route: '/core/adjetivos-adverbios' },
+
+    ],
+    route: '/areas/gramatica'
+  },
+  {
+    name: 'SINTAXIS',
+    children: [
+      { name: 'La intención del autor', route: '/core/intencion-autor' },
+      { name: 'El tema', route: '/core/tema' },
+      { name: 'Las ideas', route: '/core/ideas' },
+      { name: 'La intención del párrafo', route: '/core/intencion-parrafo' },
+      { name: 'Esquematización del argumento', route: '/core/argumento-esquematizacion' },
+      { name: 'El pasaje y el tema del libro', route: '/core/pasaje-tema' },
+
+    ],
+    route: '/areas/sintaxis'
+  },
+  {
+    name: 'LITERATURA',
+    children: [
+      { name: 'Género', route: '/core/genero' },
+      { name: 'Formulas de expresión', route: '/core/formulas-expresion' },
+      { name: 'Patrones de retórica', route: '/core/patrones-retorica' },
+      { name: 'Evaluación del texto original', route: '/core/evaluacion-texto-orginal' },
+      { name: 'Figuras de dicción', route: '/core/figuras-diccion' },
+      { name: 'Modismos', route: '/core/modismos' },
+
+    ],
+    route: '/areas/literatura'
+  },
+
+
+]
 
 interface ExampleFlatNode {
   expandable: boolean;
@@ -67,10 +95,11 @@ interface ExampleFlatNode {
   styleUrls: ["./content-sidenav.component.css"]
 })
 export class ContentSidenavComponent {
-  private _transformer = (node: FoodNode, level: number) => {
+  private _transformer = (node: AreaNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
+      route: node.route,
       level: level
     };
   };
@@ -94,4 +123,11 @@ export class ContentSidenavComponent {
   }
 
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+
+
+  navigate(route: string) {
+    console.log(route)
+  }
 }
+
+

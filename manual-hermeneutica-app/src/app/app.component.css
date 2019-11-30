@@ -1,4 +1,26 @@
+.sidenav {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  min-width: 260px;
+  background-color: #fff;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
+  padding-top: 20px;
+
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+}
+
 .sidenav-content {
   min-height: 100vh;
-  padding: 0px 20px 20px 20px;
+  padding: 80px 3rem 2rem;
 }

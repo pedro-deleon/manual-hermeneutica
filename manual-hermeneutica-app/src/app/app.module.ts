@@ -44,6 +44,24 @@ import { ArgumentoEsquematizacionComponent } from './core/argumento-esquematizac
 import { PasajeTemaComponent } from './core/pasaje-tema/pasaje-tema.component';
 import { GeneroComponent } from './core/genero/genero.component';
 import { LiteraturaComponent } from './areas/literatura/literatura.component';
+import { FormulasExpresionComponent } from './core/formulas-expresion/formulas-expresion.component';
+import { PatronesRetoricaComponent } from './core/patrones-retorica/patrones-retorica.component';
+import { EvaluacionTextoOriginalComponent } from './core/evaluacion-texto-original/evaluacion-texto-original.component';
+import { FigurasDiccionComponent } from './core/figuras-diccion/figuras-diccion.component';
+import { ModismosComponent } from './core/modismos/modismos.component';
+import { ContextoExternoComponent } from './areas/contexto-externo/contexto-externo.component';
+import { AutorComponent } from './core/autor/autor.component';
+import { DestinatariosComponent } from './core/destinatarios/destinatarios.component';
+import { HistoriaComponent } from './core/historia/historia.component';
+import { CulturaComponent } from './core/cultura/cultura.component';
+import { ReligionComponent } from './core/religion/religion.component';
+import { PoliticaComponent } from './core/politica/politica.component';
+import { FilosofiaComponent } from './core/filosofia/filosofia.component';
+import { GeografiaComponent } from './core/geografia/geografia.component';
+import { CronologiaComponent } from './core/cronologia/cronologia.component';
+import { PropositoLibroComponent } from './core/proposito-libro/proposito-libro.component';
+import { TeologiaComponent } from './areas/teologia/teologia.component';
+import { AplicacionHomileticaComponent } from './areas/aplicacion-homiletica/aplicacion-homiletica.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +100,25 @@ import { LiteraturaComponent } from './areas/literatura/literatura.component';
     ArgumentoEsquematizacionComponent,
     PasajeTemaComponent,
     GeneroComponent,
-    LiteraturaComponent
+    LiteraturaComponent,
+    FormulasExpresionComponent,
+    PatronesRetoricaComponent,
+    EvaluacionTextoOriginalComponent,
+    FigurasDiccionComponent,
+    ModismosComponent,
+    ContextoExternoComponent,
+    AutorComponent,
+    DestinatariosComponent,
+    HistoriaComponent,
+    CulturaComponent,
+    ReligionComponent,
+    PoliticaComponent,
+    FilosofiaComponent,
+    GeografiaComponent,
+    CronologiaComponent,
+    PropositoLibroComponent,
+    TeologiaComponent,
+    AplicacionHomileticaComponent
   ],
   imports: [
     BrowserModule,

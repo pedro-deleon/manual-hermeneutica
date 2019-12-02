@@ -1,5 +1,5 @@
 <mat-toolbar class="toolbar">
-  <h1>Manual Hermenéutica Ps José Perez Perez</h1>
+  <h1>{{ "Manual Hermenéutica Ps José Perez Perez" | uppercase}}</h1>
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -10,3 +10,17 @@
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<footer>
+
+
+  <div class="firma">
+    <p>Hecho con </p>
+    <p>
+      <i class="material-icons">
+        favorite
+      </i>
+    </p>
+    por <a href="https://twitter.com/pedleonr" target="_blank" rel="noopener noreferrer">Pedro</a>
+  </div>
+</footer>

@@ -23,7 +23,7 @@ const TREE_DATA: AreaNode[] = [
       { name: 'Evaluación de la Cultura', route: '/core/evaluacion-cultura' },
       { name: 'Técnica de Análisis de los Problemas', route: '/core/analisis-problemas' }
     ],
-    route: '/areas/contexto-interno'
+    route: '/area/contexto-interno'
   },
   {
     name: 'SEMÁNTICA',
@@ -40,7 +40,7 @@ const TREE_DATA: AreaNode[] = [
       { name: 'Usus Loquendi', route: '/core/usus-loquendi' },
       { name: 'Observaciones Finales', route: '/core/semantica-of' },
     ],
-    route: '/areas/semantica'
+    route: '/area/semantica'
   },
   {
     name: 'GRAMATICA',
@@ -51,7 +51,7 @@ const TREE_DATA: AreaNode[] = [
       { name: 'Adjetivos y adverbios', route: '/core/adjetivos-adverbios' },
 
     ],
-    route: '/areas/gramatica'
+    route: '/area/gramatica'
   },
   {
     name: 'SINTAXIS',
@@ -64,7 +64,7 @@ const TREE_DATA: AreaNode[] = [
       { name: 'El pasaje y el tema del libro', route: '/core/pasaje-tema' },
 
     ],
-    route: '/areas/sintaxis'
+    route: '/area/sintaxis'
   },
   {
     name: 'LITERATURA',
@@ -77,10 +77,35 @@ const TREE_DATA: AreaNode[] = [
       { name: 'Modismos', route: '/core/modismos' },
 
     ],
-    route: '/areas/literatura'
+    route: '/area/literatura'
   },
+  {
+    name: 'CONTEXTO EXTERNO',
+    children: [
+      { name: 'El autor', route: '/core/autor' },
+      { name: 'Los destinatarios', route: '/core/destinatarios' },
+      { name: 'La historia', route: '/core/historia' },
+      { name: 'La cultura', route: '/core/cultura' },
+      { name: 'La religión', route: '/core/religion' },
+      { name: 'La política', route: '/core/politica' },
+      { name: 'La filosofía', route: '/core/filosofia' },
+      { name: 'La geografía', route: '/core/geografia' },
+      { name: 'La cronología', route: '/core/cronologia' },
+      { name: 'El proposito del libro', route: '/core/proposito-libro' },
 
-
+    ],
+    route: '/area/contexto-externo'
+  },
+  {
+    name: 'TEOLOGÍA',
+    route: '/area/teologia',
+    children: [{ name: '' }]
+  },
+  {
+    name: 'APLICACIÓN HOMILÉTICA',
+    route: '/area/aplicacion-homiletica',
+    children: [{ name: '' }]
+  }
 ]
 
 interface ExampleFlatNode {

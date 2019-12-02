@@ -18,9 +18,50 @@
   left: 0;
   z-index: 10;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  color: #eeeeee;
+  background-color: #393e46;
 }
 
 .sidenav-content {
   min-height: 100vh;
   padding: 80px 3rem 2rem;
+}
+
+footer {
+  font-family: 'Press Start 2P', cursive;
+  position: relative;
+  line-height: 2.4rem;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 48px;
+  z-index: 0;
+  background-color:
+    #393e46;
+  font-size: small;
+  color: #eeeeee;
+}
+
+
+.firma {
+  text-align: end;
+}
+
+.firma p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.firma p i {
+  margin-right: 48px;
+  color: red;
+}
+
+.firma a:visited,
+.firma a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.firma a:hover {
+  color: gray;
 }

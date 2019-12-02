@@ -34,14 +34,35 @@ import { PasajeTemaComponent } from './core/pasaje-tema/pasaje-tema.component';
 import { IntencionParrafoComponent } from './core/intencion-parrafo/intencion-parrafo.component';
 import { LiteraturaComponent } from './areas/literatura/literatura.component';
 import { GeneroComponent } from './core/genero/genero.component';
+import { FormulasExpresionComponent } from './core/formulas-expresion/formulas-expresion.component';
+import { PatronesRetoricaComponent } from './core/patrones-retorica/patrones-retorica.component';
+import { FigurasDiccionComponent } from './core/figuras-diccion/figuras-diccion.component';
+import { EvaluacionTextoOriginalComponent } from './core/evaluacion-texto-original/evaluacion-texto-original.component';
+import { ModismosComponent } from './core/modismos/modismos.component';
+import { ContextoExternoComponent } from './areas/contexto-externo/contexto-externo.component';
+import { TeologiaComponent } from './areas/teologia/teologia.component';
+import { AplicacionHomileticaComponent } from './areas/aplicacion-homiletica/aplicacion-homiletica.component';
+import { AutorComponent } from './core/autor/autor.component';
+import { DestinatariosComponent } from './core/destinatarios/destinatarios.component';
+import { HistoriaComponent } from './core/historia/historia.component';
+import { CulturaComponent } from './core/cultura/cultura.component';
+import { ReligionComponent } from './core/religion/religion.component';
+import { PoliticaComponent } from './core/politica/politica.component';
+import { FilosofiaComponent } from './core/filosofia/filosofia.component';
+import { GeografiaComponent } from './core/geografia/geografia.component';
+import { CronologiaComponent } from './core/cronologia/cronologia.component';
+import { PropositoLibroComponent } from './core/proposito-libro/proposito-libro.component';
 
 
 const routes: Routes = [
-  { path: "areas/contexto-interno", component: ContextoInternoComponent },
-  { path: "areas/semantica", component: SemanticaComponent },
-  { path: "areas/gramatica", component: GramaticaComponent },
-  { path: "areas/sintaxis", component: SintaxisComponent },
-  { path: "areas/literatura", component: LiteraturaComponent },
+  { path: "area/contexto-interno", component: ContextoInternoComponent },
+  { path: "area/semantica", component: SemanticaComponent },
+  { path: "area/gramatica", component: GramaticaComponent },
+  { path: "area/sintaxis", component: SintaxisComponent },
+  { path: "area/literatura", component: LiteraturaComponent },
+  { path: "area/contexto-externo", component: ContextoExternoComponent },
+  { path: "area/teologia", component: TeologiaComponent },
+  { path: "area/aplicacion-homiletica", component: AplicacionHomileticaComponent },
   { path: "core/libro-mismo", component: LibroMismoComponent },
   { path: "core/division-parrafos", component: DivisionParrafosComponent },
   { path: "core/agrupacion-parrafos", component: AgrupacionParrafosComponent },
@@ -71,6 +92,21 @@ const routes: Routes = [
   { path: "core/argumento-esquematizacion", component: ArgumentoEsquematizacionComponent },
   { path: "core/pasaje-tema", component: PasajeTemaComponent },
   { path: "core/genero", component: GeneroComponent },
+  { path: "core/formulas-expresion", component: FormulasExpresionComponent },
+  { path: "core/patrones-retorica", component: PatronesRetoricaComponent },
+  { path: "core/figuras-diccion", component: FigurasDiccionComponent },
+  { path: "core/evaluacion-texto-orginal", component: EvaluacionTextoOriginalComponent },
+  { path: "core/modismos", component: ModismosComponent },
+  { path: "core/autor", component: AutorComponent },
+  { path: "core/destinatarios", component: DestinatariosComponent },
+  { path: "core/historia", component: HistoriaComponent },
+  { path: "core/cultura", component: CulturaComponent },
+  { path: "core/religion", component: ReligionComponent },
+  { path: "core/politica", component: PoliticaComponent },
+  { path: "core/filosofia", component: FilosofiaComponent },
+  { path: "core/geografia", component: GeografiaComponent },
+  { path: "core/cronologia", component: CronologiaComponent },
+  { path: "core/proposito-libro", component: PropositoLibroComponent },
 
 
 ];

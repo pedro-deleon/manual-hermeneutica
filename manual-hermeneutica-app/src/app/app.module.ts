@@ -62,6 +62,7 @@ import { CronologiaComponent } from './core/cronologia/cronologia.component';
 import { PropositoLibroComponent } from './core/proposito-libro/proposito-libro.component';
 import { TeologiaComponent } from './areas/teologia/teologia.component';
 import { AplicacionHomileticaComponent } from './areas/aplicacion-homiletica/aplicacion-homiletica.component';
+import { IntroduccionComponent } from './areas/introduccion/introduccion.component';
 
 @NgModule({
   declarations: [
@@ -118,7 +119,8 @@ import { AplicacionHomileticaComponent } from './areas/aplicacion-homiletica/apl
     CronologiaComponent,
     PropositoLibroComponent,
     TeologiaComponent,
-    AplicacionHomileticaComponent
+    AplicacionHomileticaComponent,
+    IntroduccionComponent
   ],
   imports: [
     BrowserModule,

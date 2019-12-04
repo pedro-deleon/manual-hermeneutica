@@ -125,7 +125,8 @@ const routes: Routes = [
   { path: "core/filosofia", component: FilosofiaComponent },
   { path: "core/geografia", component: GeografiaComponent },
   { path: "core/cronologia", component: CronologiaComponent },
-  { path: "core/proposito-libro", component: PropositoLibroComponent }
+  { path: "core/proposito-libro", component: PropositoLibroComponent },
+  { path: "", component: IntroduccionComponent }
 ];
 
 @NgModule({

@@ -7,12 +7,12 @@
 
 .mat-tree-node:hover {
   background-color: gainsboro;
+  cursor: pointer;
 }
 
 .mat-tree {
   min-width: 300px;
 }
-
 
 .tree-parent {
   color: rgb(8, 8, 100);
@@ -20,10 +20,4 @@
 
 .tree-child {
   color: rgb(78, 78, 78);
-}
-
-.tree-parent:hover,
-.tree-child:hover {
-  cursor: pointer;
-
 }

@@ -6,9 +6,8 @@
   padding: 0;
   min-width: 260px;
   background-color: #fff;
-  box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
+  box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
-
 }
 
 .toolbar {
@@ -17,30 +16,28 @@
   right: 0;
   left: 0;
   z-index: 10;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   color: #eeeeee;
   background-color: #393e46;
 }
 
 .sidenav-content {
   min-height: 100vh;
-  padding: 80px 3rem 2rem;
+  padding: 70px 3rem 2rem;
 }
 
 footer {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   position: relative;
   line-height: 2.4rem;
   -webkit-flex: 1;
   flex: 1;
   padding: 48px;
   z-index: 0;
-  background-color:
-    #393e46;
+  background-color: #393e46;
   font-size: small;
   color: #eeeeee;
 }
-
 
 .firma {
   text-align: end;

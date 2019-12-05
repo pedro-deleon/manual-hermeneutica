@@ -1,9 +1,14 @@
 <mat-toolbar class="toolbar">
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
   <h1>{{ "Manual Hermenéutica Ps José Perez Perez" | uppercase}}</h1>
+
 </mat-toolbar>
 
-<mat-sidenav-container>
-  <mat-sidenav class="sidenav" mode="side" opened>
+<mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+  <mat-sidenav #snav class="sidenav" mode="side" [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
     <content-sidenav style="width: 300px;"></content-sidenav>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">

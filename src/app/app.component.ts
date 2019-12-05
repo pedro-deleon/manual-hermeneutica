@@ -23,10 +23,11 @@ export class AppComponent {
     this.mobileQuery.addListener(this._mobileQueryListener);
     router.events.subscribe(val => {
       if (this.mobileQuery.matches) {
-        console.log("Si debe cerrarse");
         this.opened = false;
       }
     });
+
+    console.log(changeDetectorRef);
   }
 
   ngOnDestroy(): void {

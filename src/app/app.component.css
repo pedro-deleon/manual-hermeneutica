@@ -62,3 +62,9 @@ footer {
 .firma a:hover {
   color: gray;
 }
+
+@media (max-width: 600px) {
+  .firma {
+    text-align: center;
+  }
+}

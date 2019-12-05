@@ -51,6 +51,7 @@ footer {
 .firma p i {
   margin-right: 48px;
   color: red;
+  font-size: 40px;
 }
 
 .firma a:visited,
@@ -66,5 +67,6 @@ footer {
 @media (max-width: 600px) {
   .firma {
     text-align: center;
+    padding-left: 15px;
   }
 }

@@ -21,6 +21,10 @@
   background-color: #393e46;
 }
 
+.toolbar button {
+  margin-right: 20px;
+}
+
 .sidenav-content {
   min-height: 100vh;
   padding: 70px 3rem 2rem;
@@ -41,6 +45,7 @@ footer {
 
 .firma {
   text-align: end;
+  font-size: smaller;
 }
 
 .firma p {
@@ -49,9 +54,9 @@ footer {
 }
 
 .firma p i {
-  margin-right: 48px;
+  margin-right: 35px;
   color: red;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .firma a:visited,
@@ -68,5 +73,9 @@ footer {
   .firma {
     text-align: center;
     padding-left: 15px;
+  }
+
+  .firma p i {
+    margin-left: 35px;
   }
 }

@@ -14,8 +14,8 @@ interface AreaNode {
 const TREE_DATA: AreaNode[] = [
   {
     name: "INTRODUCCIÓN",
-    children: [{ name: null }],
-    route: "/area/introduccion"
+    route: "/area/introduccion",
+    children: []
   },
   {
     name: "CONTEXTO INTERNO",
@@ -130,12 +130,12 @@ const TREE_DATA: AreaNode[] = [
   {
     name: "TEOLOGÍA",
     route: "/area/teologia",
-    children: [{ name: null }]
+    children: []
   },
   {
     name: "APLICACIÓN HOMILÉTICA",
     route: "/area/aplicacion-homiletica",
-    children: [{ name: null }]
+    children: []
   }
 ];
 
@@ -153,7 +153,7 @@ interface ExampleFlatNode {
 export class ContentSidenavComponent {
   private _transformer = (node: AreaNode, level: number) => {
     return {
-      expandable: !!node.children && node.children.length > 0,
+      expandable: !!node.children && node.children.length >= 0,
       name: node.name,
       route: node.route,
       level: level

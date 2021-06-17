@@ -1,17 +1,17 @@
 .mat-tree-node {
   padding: 0px !important;
-  margin: -6px;
+  margin: 0px;
   font-size: 15px;
   min-height: 0px;
+}
+
+.mat-tree {
+  width: 300px;
 }
 
 .mat-tree-node:hover {
   background-color: gainsboro;
   cursor: pointer;
-}
-
-.mat-tree {
-  min-width: 300px;
 }
 
 .tree-parent {

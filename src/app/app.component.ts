@@ -1,6 +1,13 @@
-import { Component, ChangeDetectorRef } from "@angular/core";
-import { MediaMatcher } from "@angular/cdk/layout";
-import { Router } from "@angular/router";
+import {
+  Component,
+  ChangeDetectorRef
+} from "@angular/core";
+import {
+  MediaMatcher
+} from "@angular/cdk/layout";
+import {
+  Router
+} from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -11,26 +18,24 @@ export class AppComponent {
   title = "manual-hermeneutica-app";
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
-  opened = true;
+  opened: Boolean = true;
 
-  constructor(
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher,
-    private router: Router
-  ) {
-    this.mobileQuery = media.matchMedia("(max-width: 600px)");
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, route: Router) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-    router.events.subscribe(val => {
+    this.mobileQuery.addEventListener('change', this._mobileQueryListener);
+
+
+
+
+    route.events.subscribe(() => {
       if (this.mobileQuery.matches) {
         this.opened = false;
       }
     });
-
-    console.log(changeDetectorRef);
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeEventListener('change', this._mobileQueryListener);
   }
 }

@@ -9,21 +9,30 @@
     <button mat-icon-button disabled></button>
     <div class="tree-child">{{ node.name }}</div>
   </mat-tree-node>
+
+  
   <!-- This is the tree node template for expandable nodes -->
   <mat-tree-node
     *matTreeNodeDef="let node; when: hasChild"
     matTreeNodePadding
     routerLink="{{ node.route }}"
   >
-    <button
-      mat-icon-button
-      matTreeNodeToggle
-      [attr.aria-label]="'toggle ' + node.name"
-    >
-      <mat-icon class="mat-icon-rtl-mirror">
+
+
+  <button
+  mat-icon-button
+  matTreeNodeToggle
+  [attr.aria-label]="'toggle ' + node.name"
+>
+
+    
+      <mat-icon>
         {{ treeControl.isExpanded(node) ? "expand_more" : "chevron_right" }}
       </mat-icon>
-    </button>
+    
+
+</button>
     <div class="tree-parent">{{ node.name }}</div>
+
   </mat-tree-node>
 </mat-tree>

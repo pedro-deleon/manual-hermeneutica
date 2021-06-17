@@ -1,9 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
 
 html,
 body {
   height: 100%;
   font-family: "David Libre", serif;
+  font-size: large;
   margin: 0;
 }
 
@@ -17,4 +17,9 @@ body {
 
 .seccion-griego h3 {
   color: #0d5baa;
+}
+
+
+ol{
+  line-height: 2;
 }

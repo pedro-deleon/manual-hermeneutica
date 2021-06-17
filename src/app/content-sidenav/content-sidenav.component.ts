@@ -153,7 +153,7 @@ interface ExampleFlatNode {
 export class ContentSidenavComponent {
   private _transformer = (node: AreaNode, level: number) => {
     return {
-      expandable: !!node.children && node.children.length >= 0,
+      expandable: node.children && node.children.length > 0,
       name: node.name,
       route: node.route,
       level: level

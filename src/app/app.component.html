@@ -1,8 +1,17 @@
 <mat-toolbar class="toolbar">
-  <button mat-icon-button (click)="snav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <h1>{{ "Manual Hermenéutica" | uppercase }}</h1>
+  <div style="display: flex">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>{{ "Manual Hermenéutica" | uppercase }}</h1>
+  </div>
+
+  <div>
+<!--    <mat-icon class="my-icon"  aria-hidden="false" aria-label="Dark mode icon">dark_mode</mat-icon>-->
+    <a href="https://github.com/pedro-deleon/manual-hermeneutica" target="_blank"><mat-icon class="my-icon"  svgIcon="github"></mat-icon></a>
+
+  </div>
+
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -10,14 +19,14 @@
     #snav
     class="sidenav"
     [style.marginTop.px]="mobileQuery.matches ? 40 : 0"
-    [mode] = "mobileQuery.matches ? 'over' : 'side'"
-    [fixedInViewport] = "mobileQuery.matches"
-    [(opened)] = "opened"
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches"
+    [(opened)]="opened"
   >
     <content-sidenav></content-sidenav>
   </mat-sidenav>
-  <mat-sidenav-content class="sidenav-content">
-    <router-outlet></router-outlet>
+  <mat-sidenav-content [@fadeInOut]="prepareRoute(outletRef)" class="sidenav-content">
+    <router-outlet #outletRef="outlet"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

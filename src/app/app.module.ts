@@ -1,15 +1,15 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { ContextoInternoComponent } from "./areas/contexto-interno/contexto-interno.component";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { ContentSidenavComponent } from "./content-sidenav/content-sidenav.component";
-import { MatTreeModule } from "@angular/material/tree";
-import { MatIconModule } from "@angular/material/icon";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {ContextoInternoComponent} from './areas/contexto-interno/contexto-interno.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {ContentSidenavComponent} from './content-sidenav/content-sidenav.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatIconModule} from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LibroMismoComponent } from './core/libro-mismo/libro-mismo.component';
 import { DivisionParrafosComponent } from './core/division-parrafos/division-parrafos.component';
@@ -63,6 +63,7 @@ import { PropositoLibroComponent } from './core/proposito-libro/proposito-libro.
 import { TeologiaComponent } from './areas/teologia/teologia.component';
 import { AplicacionHomileticaComponent } from './areas/aplicacion-homiletica/aplicacion-homiletica.component';
 import { IntroduccionComponent } from './areas/introduccion/introduccion.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -130,7 +131,8 @@ import { IntroduccionComponent } from './areas/introduccion/introduccion.compone
     MatToolbarModule,
     MatTreeModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

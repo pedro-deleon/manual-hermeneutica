@@ -7,7 +7,6 @@
   min-width: 260px;
   background-color: #fff;
   box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
 }
 
 .toolbar {
@@ -19,13 +18,26 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   color: #eeeeee;
   background-color: #393e46;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.toolbar button {
-  margin-right: 20px;
+.toolbar div h1 {
+  padding-top: 5px;
+}
+
+.toolbar div .my-icon{
+  padding: 10px;
+}
+
+.toolbar div .my-icon:hover{
+  cursor: pointer;
 }
 
 .sidenav-content {
+  position: relative;
+  max-width: 1000px;
   min-height: 100vh;
   padding: 70px 3rem 2rem;
 }

@@ -3,34 +3,43 @@
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1>{{ "Manual Hermenéutica" | uppercase }}</h1>
+
   </div>
 
+  <h1>{{ "Manual Hermenéutica" | uppercase }}</h1>
+
   <div>
-<!--    <mat-icon class="my-icon"  aria-hidden="false" aria-label="Dark mode icon">dark_mode</mat-icon>-->
-    <a href="https://github.com/pedro-deleon/manual-hermeneutica" target="_blank"><mat-icon class="my-icon"  svgIcon="github"></mat-icon></a>
+    <a href="https://github.com/pedro-deleon/manual-hermeneutica" target="_blank">
+      <mat-icon class="my-icon" svgIcon="github"></mat-icon>
+    </a>
 
   </div>
 
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav
-    #snav
-    class="sidenav"
-    [style.marginTop.px]="mobileQuery.matches ? 40 : 0"
-    [mode]="mobileQuery.matches ? 'over' : 'side'"
-    [fixedInViewport]="mobileQuery.matches"
-    [(opened)]="opened"
-  >
+  <mat-sidenav #snav class="sidenav" [style.marginTop.px]="mobileQuery.matches ? 50 : 0"
+    [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" [(opened)]="opened">
     <content-sidenav></content-sidenav>
   </mat-sidenav>
   <mat-sidenav-content [@fadeInOut]="prepareRoute(outletRef)" class="sidenav-content">
-    <router-outlet #outletRef="outlet"></router-outlet>
+    <router-outlet #outletRef="outlet" (activate)="onActiveRoute($event)"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
 <footer>
+  <a class="container" href="https://www.biblegateway.com/passage/?search=Apocalipsis+4%3A8&version=NBLA"
+    target="_blank">
+    <div class="one">
+      Santo, Santo, Santo es el Señor Dios, el Todopoderoso
+    </div>
 
+    <div class="two">
+      El que era, El que es y El que ha de venir
+    </div>
+
+    <div class="three">
+      Apocalipsis 4:8
+    </div>
+  </a>
 </footer>
-

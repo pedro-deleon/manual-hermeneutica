@@ -1,3 +1,9 @@
+.active-route {
+  background-color: #393e46;
+  color: white;
+  font-weight: bolder;
+}
+
 .mat-tree-node {
   padding: 0px !important;
   margin: 0px;
@@ -10,14 +16,8 @@
 }
 
 .mat-tree-node:hover {
-  background-color: gainsboro;
+  background-color: #393e46;
+  color: white;
+  font-weight: bolder;
   cursor: pointer;
-}
-
-.tree-parent {
-  color: rgb(8, 8, 100);
-}
-
-.tree-child {
-  color: rgb(78, 78, 78);
 }

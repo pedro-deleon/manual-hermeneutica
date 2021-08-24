@@ -1,6 +1,6 @@
 import {
   Component,
-  ChangeDetectorRef, OnDestroy
+  ChangeDetectorRef, OnDestroy, HostListener
 } from '@angular/core';
 import {
   MediaMatcher
@@ -8,9 +8,10 @@ import {
 import {
   Router, RouterOutlet
 } from '@angular/router';
-import {fadeInOut} from './animations';
-import {MatIconRegistry} from '@angular/material';
-import {DomSanitizer} from '@angular/platform-browser';
+import { fadeInOut } from './animations';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -19,15 +20,17 @@ import {DomSanitizer} from '@angular/platform-browser';
   animations: [fadeInOut]
 })
 export class AppComponent implements OnDestroy {
-  title = 'manual-hermeneutica-app';
   mobileQuery: MediaQueryList;
   private mobileQueryListener: () => void;
   opened = true;
 
-  constructor(changeDetectorRef: ChangeDetectorRef,
-              media: MediaMatcher, route: Router,
-              private matIconRegistry: MatIconRegistry,
-              private domSanitizer: DomSanitizer ) {
+  constructor(
+    public changeDetectorRef: ChangeDetectorRef,
+    public media: MediaMatcher,
+    public route: Router,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer,
+    private vps: ViewportScroller) {
     this.matIconRegistry
       .addSvgIcon('github',
         this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/github_mark_white.svg'));
@@ -45,11 +48,29 @@ export class AppComponent implements OnDestroy {
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    console.log(outlet.activatedRoute.routeConfig.path);
     return outlet.isActivated ? outlet.activatedRoute : '';
+  }
+
+  onActiveRoute(event) {
+    this.vps.scrollToPosition([0, 0]);
+  }
+
+
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (event.target.innerWidth <= 900) {
+      this.opened = false;
+    } else {
+      this.opened = true;
+    }
   }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeEventListener('change', this.mobileQueryListener);
   }
+
+
+
 }

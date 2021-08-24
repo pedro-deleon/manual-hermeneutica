@@ -1,37 +1,24 @@
 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-  <!-- This is the tree node template for leaf nodes -->
-  <mat-tree-node
-    *matTreeNodeDef="let node"
-    matTreeNodePadding
-    routerLink="{{ node.route }}"
-  >
-    <!-- use a disabled button to provide padding for tree leaf -->
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding routerLink="{{ node.route }}"
+    routerLinkActive="active-route">
     <button mat-icon-button disabled></button>
     <div class="tree-child">{{ node.name }}</div>
   </mat-tree-node>
 
-  
-  <!-- This is the tree node template for expandable nodes -->
-  <mat-tree-node
-    *matTreeNodeDef="let node; when: hasChild"
-    matTreeNodePadding
-    routerLink="{{ node.route }}"
-  >
+
+  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding routerLink="{{ node.route }}"
+    routerLinkActive="active-route">
 
 
-  <button
-  mat-icon-button
-  matTreeNodeToggle
-  [attr.aria-label]="'toggle ' + node.name"
->
+    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
 
-    
+
       <mat-icon>
         {{ treeControl.isExpanded(node) ? "expand_more" : "chevron_right" }}
       </mat-icon>
-    
 
-</button>
+
+    </button>
     <div class="tree-parent">{{ node.name }}</div>
 
   </mat-tree-node>
